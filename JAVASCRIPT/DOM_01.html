@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>DOM API</title>
+        <script>
+            window.onload = function() {
+
+                pelement = document.getElementById('p1');
+                console.log(pelement.tagName);  //P
+                console.log(pelement.nodeType);  //1 Element
+                console.log(pelement.nodeName);  // P
+            
+                divElement = document.querySelector('.div');
+                console.log(divElement.tagName);   //DIV
+                console.log(divElement.nodeType);  //1 Element
+                console.log(divElement.nodeName);  //DIV
+
+                console.log('-------------------------------------------------------');
+
+                // NodeList : Array 처리 
+                pList = document.getElementsByTagName('p');
+                for (const pElement of pList) {
+                    console.log(pElement.tagName);  
+                    console.log(pElement.nodeType); 
+                    console.log(pElement.id);  
+                }
+            
+            }
+        </script>
+    </head>
+    <body>
+        <p id="p1">Hello, JavaScript!!</p>    
+        <p id="p2">Hi, JavaScript!!</p>    
+        <div class='div'>Hello, JavaScript!!</div>             
+        
+    </body>
+</html>

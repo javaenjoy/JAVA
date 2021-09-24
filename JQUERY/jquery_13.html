@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>DOM insertion - inside</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            //$('#div1').prepend('<p>Hi, jQuery!!</p>');
+
+            //prependTo()
+            //$('<p>Hi, jQuery!!</p>').prependTo('#div1');
+
+            //console.log($('#div1').html());
+            //$('#div1').html('<p>Hello, jQuery!!</p>');
+
+            console.log($('p').text());
+            console.log($('p').text('One'));
+                  
+            
+        });
+    </script>
+</head>
+
+<body> 
+    <div id="div1">
+        <p>First</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Event</title>    
+    <style>
+        table {
+            width: 300px;
+            border-collapse: collapse;
+        }
+
+        tr, td, th {
+            border: 1px solid blue;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {               
+            var userList = [
+                {"no": 1, "name": 'julia1', "email": 'java1@gmailcom'},
+                {"no": 2, "name": 'julia2', "email": 'java2@gmailcom'},
+                {"no": 3, "name": 'julia3', "email": 'java3@gmailcom'},
+                {"no": 4, "name": 'julia4', "email": 'java4@gmailcom'},
+                {"no": 5, "name": 'julia5', "email": 'java5@gmailcom'}
+            ]
+
+           
+            $('#btn').on('click', function() {                   
+                $('table > tbody').html("");
+                var arr = [];            
+                for (const user of userList) {
+                    arr.push(`<tr id=${user.no}><td>${user.name}</td><td>${user.email}</td></tr>`);
+                }
+                $('table > tbody').append(arr.join(''));
+
+                console.log($('tbody').html());
+            });   
+
+            // DOM 이 로드된 후 동적으로 생성된 요소에 대해서 이벤트를 추가할때는 반드시 
+            // on('이벤트 유형', selector, 이벤트 핸들러) 메소드를 사용해야 한다.
+            // $(selector, [context]) : context를 기준으로 후손들중에 선택자에 해당하는 요소를 검색햔다.
+            // $(selector) : context가 없는 경우 document를 기준으로 후손들중에서 선택자에 해당하는 요소를 검색한다.
+            $('table').on('click', 'tr:not(:first)', function() {
+                console.log('id : ', $(this).attr('id'));     
+
+                // $('td' , this) : $(selector, context)
+                // this는 click 이벤트를 발생시킨 tr 요소이므로 
+                // tr 요소를 기준으로 후손들 중에서 td 요소를 검색한다.
+                var name = $('td' , this).filter(':nth-child(1)').text();
+                var email = $('td' , this).filter(':nth-child(2)').text();
+                
+                console.log(`name : ${name}, email : ${email}`);   
+                
+            });           
+        });
+
+    </script>
+</head>
+
+<body>
+    <button id="btn">데이터 불러오기</button>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>이메일</th>
+            </tr>
+        </thead>
+        <tbody>            
+        </tbody>
+    </table>
+</body>
+
+</html>

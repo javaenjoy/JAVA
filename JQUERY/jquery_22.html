@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Event</title>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {         
+         
+            $('#btn1').on('click', function() {
+                //이벤트 핸들러 함수에서 this는 이벤트를 발생시킨 DOM Element 객체를 가리킨다.
+                //console.log('call click');
+                console.log(this);
+                console.log($(this).attr('id'));
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    
+    <button id="btn1" type="button">Click</button>
+</body>
+
+</html>

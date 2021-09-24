@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Selector - 가상 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            console.log($(':checked').val());
+        });
+    </script>
+</head>
+
+<body> 
+    <form>
+    <p>
+        <input type="radio" name="newsletter" value="Hourly">Hourly
+        <input type="radio" name="newsletter" value="Daily">Daily
+        <input type="radio" name="newsletter" value="Weekly">Weekly
+        <input type="radio" name="newsletter" value="Monthly" checked>Monthly
+        <input type="radio" name="newsletter" value="Yearly">Yearly
+    </p>
+    </form>
+   
+</body>
+
+</html>

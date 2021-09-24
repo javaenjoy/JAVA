@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Selector</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {               
+
+                //자식 선택자
+                //$('#ul1 > li').css('color', 'red');
+                
+                //후손 선택자
+                //$('#ul1 li').css('color', 'red');
+                
+                //다음 형제 선택자
+                //$('#li1 + li').css('color', 'blue');
+                //다음 형제들 선택자
+                $('#li1 ~ li').css('color', 'blue');
+            });
+
+            
+        </script>
+    </head>
+    <body>
+       <ul id="ul1">
+            <li>First</li>
+            <li id="li1">Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <ul>
+                <li>First-1</li>
+                <li>First-2</li>
+                <li>First-3</li>
+                <li>First-4</li>
+            </ul>
+       </ul>       
+
+    </body>
+</html>

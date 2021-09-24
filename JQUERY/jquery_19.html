@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>CSS</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $('p').on('click', function() {
+                // var flag = $('p').hasClass('highlight');
+                // if (flag) {
+                //     $('p').removeClass('highlight');
+                // } else {
+                //     $('p').addClass('highlight');
+                // }
+                
+                $('p').toggleClass('highlight');
+
+            });          
+                       
+        });
+    </script>
+</head>
+
+<body>
+    <p class="highlight">Hello, jQuery!!</p>
+</body>
+
+</html>

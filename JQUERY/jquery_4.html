@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Selector - Attributes</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                
+                //var obj = $('[href="http://www.google.com"]').text();
+                //console.log(obj);
+
+                //href 속성이 'http'로 시작하는 요소 검색 
+                //$('[href^="http"]').each( (index, element) => {
+                //    console.log($(element).text());
+                //});
+                
+                 //href 속성이 'com'로 끝나는 요소 검색
+                $('[href$="com"]').each( (index, element) => {
+                    console.log($(element).text());
+                });
+
+                
+            });
+
+            
+        </script>
+    </head>
+    <body>
+        <a href="http://www.google.com">구글</a><br>
+        <a href="http://www.naver.com">네이버</a><br>
+        <a href="https://www.daum.net">다음</a><br>            
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Event</title>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        // DOM 문서 로드가 완료되었을때 
+        $(document).ready(function () {         
+            console.log('call document ready!!');
+        });
+
+        // HTML 문서에 포함된 외부 리소스가 모두 메모리에 로드 되었을때
+        $(window).on('load', function () {         
+            console.log('call window load!!');
+        });
+
+    </script>
+</head>
+
+<body>
+    
+    
+</body>
+
+</html>

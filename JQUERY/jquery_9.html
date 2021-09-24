@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Tree Traversal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            //$('#ul1').children('li').css('color', 'red');
+
+            var obj = $('#li1').parent();
+            //console.log(obj.attr('id'));
+
+            var obj = $('#li1').parents().each( (index, element) => {
+                console.log(element.tagName);
+                //console.log(element.nodName);
+            });
+            
+
+            // 아이디가 #ul1인 UL 요소의 후손들중에서 'First' 문자열을 포함한 li 요소 검색
+            var obj = $('#ul1').find('li:contains("First")');
+            //console.log(obj);
+
+            $('#ul1').find('li:contains("First")').css('color', 'red');
+
+            $('#ul1').find('li:contains("First")').each((index, element) => {
+                console.log($(element).text());
+
+            });            
+        });
+    </script>
+</head>
+
+<body> 
+    <ul id="ul1">
+        <li>First</li>
+        <li id="li1">Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <ul>
+            <li>First-1</li>
+            <li>First-2</li>
+            <li>First-3</li>
+            <li>First-4</li>
+        </ul>
+   </ul>
+</body>
+
+</html>

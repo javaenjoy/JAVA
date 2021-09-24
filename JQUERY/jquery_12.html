@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>DOM insertion - inside</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            // '<p>Hello, jQuery!!</p>' 문자열을 $() 메소드를 사용하여 jQuery 객체로 변환하여 반환한다.
+            //$('<p>Hello, jQuery!!</p>').appendTo($('#div1'));
+            //console.log($('body').html());   //innerHTML
+
+            $('#div1').append('<p>Hello, jQuery!!</p>');
+             console.log($('body').html());   
+                       
+        });
+    </script>
+</head>
+
+<body> 
+   <div id="div1"></div>
+</body>
+
+</html>

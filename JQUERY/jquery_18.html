@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>CSS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // 요소에 스타일 설정
+            $('#div1').css('color', 'blue');
+            
+            $('#div1').css({
+                'width': '200px',
+                'height': '200px',
+                'background-color': 'green'
+            });       
+            
+            // 요소에 설정된 스타일 조회
+            console.log($('#div1').css('color'));
+           
+                       
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div1">Hello, jQuery!!</div>    
+</body>
+
+</html>

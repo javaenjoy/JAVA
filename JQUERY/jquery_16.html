@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>DOM Removal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+           
+            // 특정 요소를 기준으로 모든 자식 및 후손 요소를 제거한다.            
+            //$('#div1').empty();
+
+            //console.log($('body').html());
+
+            $('p').first().remove();
+            $('span').unwrap();
+            console.log($('body').html());
+
+                       
+        });
+    </script>
+</head>
+
+<body> 
+    <div id="div1">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+    </div>
+
+    <div>
+        <p><span>First</span></p>
+        <p><span>Second</span></p>
+    </div>
+
+</body>
+
+</html>

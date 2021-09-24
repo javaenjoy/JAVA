@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Selector - 가상선택자</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            console.log($('#garden  option:selected').val());
+        });
+    </script>
+</head>
+
+<body> 
+    <select id="garden">
+        <option value="1">Flowers</option>
+        <option value="2">Shrubs</option>
+        <option value="3">Trees</option>
+        <option value="4" selected="selected">Bushes</option>
+        <option value="5">Grass</option>
+        <option value="6">Dirt</option>
+    </select>
+
+</body>
+
+</html>

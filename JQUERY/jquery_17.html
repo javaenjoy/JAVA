@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>DOM Removal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+           
+            //$('p').replaceWith('<h1>First</h1>');
+            //console.log($('#div1').html());
+
+            //replaceAll
+            $('<h1>First</h1>').replaceAll('p');
+            console.log($('#div1').html());
+            
+           
+                       
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="div1"> 
+        <p>First</p>
+    </div>
+
+</body>
+
+</html>

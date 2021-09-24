@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Event</title>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {         
+
+            $('#btn1').on('click', function() {
+                
+                var userid = $(':text[name="userid"]').val();
+                var userpwd = $(':text[name="userpwd"]').val();
+
+                console.log(`userid : ${userid}`);
+                console.log(`userpwd : ${userpwd}`);
+
+                $('form').attr('action', 'http://www.naver.com');
+                $('form').attr('type', 'GET');
+                $('form').submit();
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <form>
+        아이디 : <input type="text" name="userid"> <br>
+        비밀번호 : <input type="text" name="userpwd"> <br>
+        <button id="btn1" type="button">Click</button>
+    </form>    
+    
+</body>
+
+</html>

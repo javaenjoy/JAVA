@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() { 
+                //DOM Element              
+                var pElement = document.getElementById('p1');
+                console.log(pElement.innerText);
+                console.log(pElement.firstChild.nodeValue);
+
+               
+                // $() (jQuery 메소드)가 DOM Element를 jQuery 객체로 변환하여 반환한다.
+                var obj = $(pElement);   //jQuery Object : obj
+                console.log(`pElement : ${pElement}`);
+                console.log(`obj :`, obj);
+                console.log(`obj :`, obj.text());                
+            });
+        </script>
+    </head>
+    <body>        
+        <p id="p1">Hello, jQuery!!</p>
+    </body>
+</html>

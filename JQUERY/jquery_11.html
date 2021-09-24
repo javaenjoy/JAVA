@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Tree Traversal - Filtering</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // filter 메서드
+            // 메서드 체이닝 지원한다. : 메서드를 연결하여 사용하는 것
+            // 검색된 요소들을 내부적으로 스택(LIFO)으로 관리한다. 
+            // 요소를 검색할 때 마다 스택에 넎는다. (push)
+            // end() : 스택에서 요소집합을 꺼낸다. (pop)
+            //$('li').filter(':nth-child(3)').css('color', 'red').end().filter(':first').css('color', 'red');
+            //var obj = $('li').filter(':nth-child(3)').end().filter(':first');
+            //console.log(obj);
+
+            // addBack() 메서드
+            // 아이디가 item3인 요소와 다음 모든 형제 노드들을 결합하여 새로운 jQuery 객체를 생성하여 반환한다.            
+            $('#item3').nextAll().addBack().css('color', 'red');
+
+            var obj = $('#item3').nextAll().addBack();
+            console.log(obj);
+
+
+
+            
+        });
+    </script>
+</head>
+
+<body> 
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li id="item3">list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li>list item 6</li>
+      </ul>
+</body>
+
+</html>
